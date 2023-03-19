@@ -46,7 +46,7 @@ const options = {
   method: "PUT",
   headers: {
     "Content-Type": "application/json",
-    Authorization: `Bearer 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,
+    Authorization: `Bearer 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'
   },
   body: JSON.stringify(data),
 };
