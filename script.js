@@ -67,3 +67,7 @@ window.onresize=()=>{
 }
 
 setInterval(draw, root.matrixspeed);
+
+document.addEventListener('contextmenu',function(event){
+   event.preventDefault();
+},true);
