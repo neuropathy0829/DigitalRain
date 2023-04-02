@@ -9,13 +9,15 @@
     background-color: black;
 }
 
-*{
-    font-family: 'Share Tech Mono', monospace;
+@font-face {
+  font-family: myFont; /* 取一個名稱 */
+  src: url('行書.ttf'); /* 文件路徑 */
 }
-
+            
 * {
     margin: 0;
     padding: 0;
+    font-family: myFont, sans-serif;
 }
 
 canvas {
