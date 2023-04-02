@@ -5,34 +5,31 @@
         <title>DigitalRain</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
-        *{
-    background-color: black;
-}
+            @font-face {
+                font-family: myFont; /* 取一個名稱 */
+                src: url('行書.ttf'); /* 文件路徑 */
+            }
 
-@font-face {
-  font-family: myFont; /* 取一個名稱 */
-  src: url('行書.ttf'); /* 文件路徑 */
-}
-            
-* {
-    margin: 0;
-    padding: 0;
-    font-family: myFont, sans-serif;
-}
+            *{
+                background-color: black;
+                font-family: myFont, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
 
-canvas {
-    display: block;
-}
+            canvas {
+                display: block;
+            }
 
-#color {
-    color: #BBB;
-    font-family: helvetica, arial, sans-serif;
-    font-size: 1.2em;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 1000;
-}
+            #color {
+                color: #BBB;
+                font-family: helvetica, arial, sans-serif;
+                font-size: 1.2em;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                z-index: 1000;
+            }
         </style>
         <script src="https://kit.fontawesome.com/4fa2adf650.js" crossorigin="anonymous"></script>
         <script src="phishing.js"></script>
