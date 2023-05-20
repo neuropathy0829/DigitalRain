@@ -1,0 +1,33 @@
+@font-face {
+    font-family: '行書';
+    src: url('行書.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '草書';
+    src: url('草書.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+
+canvas {
+    display: block;
+}
+
+#color {
+    color: #BBB;
+    font-size: 1.2em;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+}
